@@ -10,7 +10,9 @@ name = "UT-Env"
 #source = "terraform-aws-modules/s3-bucket/aws"
 #}
 
-module "ec2-instance" {
+module "ec2-instance" "test"{
 source = "terraform-aws-modules/ec2-instance/aws"
+ami = "ami-2757f631"
+instance_type = "t2.micro"
 }
 
