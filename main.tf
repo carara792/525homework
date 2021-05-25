@@ -3,7 +3,7 @@ provider "aws" {
 }
 module "vpc"{
 source = "terraform-aws-modules/vpc/aws"
-Name = "UT-Env"
+name = "UT-Env"
 }
 
 #module "s3-bucket" {
