@@ -1,10 +1,12 @@
 provider "aws" {
   region = "us-east-1"
 }
-module "vpc"{
-source = "terraform-aws-modules/vpc/aws"
-cidr_block = "10.10.10.0/24"
-name = "UT-Env"
+
+
+module "vpc" {
+  source = "terraform-aws-modules/vpc/aws"
+  name = "cara-vpc"
+  cidr = "10.0.0.0/16"
 }
 
 module "s3-bucket" {
