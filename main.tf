@@ -3,6 +3,7 @@ provider "aws" {
 }
 module "vpc"{
 source = "terraform-aws-modules/vpc/aws"
+cidr_block = "10.10.10.0/24"
 name = "UT-Env"
 }
 
